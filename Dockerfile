@@ -15,7 +15,7 @@ RUN yarn policies set-version $YARN_VERSION
 
 # Install dependencies
 COPY package.json yarn.lock /opt/app-root/src/
-RUN yarn --network-timeout 36000 && yarn cache clean --force
+RUN yarn --network-timeout 1000000 && yarn cache clean --force
 
 # Copy all files
 COPY . .
